@@ -1,6 +1,7 @@
                 <div class="container">
                 	<div class="inner-column row">
                         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
+                            @if(list_category()->count() > 0)
                             <div id="categories" class="block sidey">
                             	<ul class="block-content nav">
                                 @foreach(list_category() as $side_menu)
@@ -33,6 +34,10 @@
                                     @endif
                                 @endforeach
                                 </ul>
+                            </div>
+                            @endif
+                            <div class="powerup">
+                                {{pluginSidePowerup()}}
                             </div>
                             @if(best_seller()->count() > 0)
                             <div id="best-seller" class="block">
@@ -87,11 +92,9 @@
                                 <div class="top-list">
                                     <h2 class="title">Produk Kami</h2>
                                     <ul class="btn-thumb">
-                                        <li>Sort by :</li>
-                                        <li>
-                                            <a class="btn-grid" id="grid" href="{{buatLink(URL::current(),array('view'=>'grid'))}}" title="View Grid">View Grid</a>
-                                        </li>
-                                        <li><a class="btn-list" id="list" href="{{buatLink(URL::current(),array('view'=>'list'))}}" title="View List">View List</a></li>
+                                        <li>Mode Tampilan :</li>
+                                        <li><a href="{{buatLink(URL::current(),array('view'=>'grid'))}}" title="View Grid"><i class="fa fa-th fa-2x"></i></a></li>
+                                        <li><a href="{{buatLink(URL::current(),array('view'=>'list'))}}" title="View List"><i class="fa fa-list fa-2x"></i></a></li>
                                     </ul>
                                     <div class="clr"></div>
                                 </div>

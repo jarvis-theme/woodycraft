@@ -1,3 +1,4 @@
+@if($mailing->action != '')
 <div id="newsletter_left" class="block">
     <div class="block-content">
         <h2>Newsletter</h2>
@@ -8,3 +9,4 @@
         </form>
     </div>
 </div>
+@endif

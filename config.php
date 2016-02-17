@@ -1,7 +1,7 @@
 <?php
 return array(
     'num_display' => array(
-        'home_product'=>9,
+        'home_product'=>8,
         'main_product'=>9,
         'related_product'=>4,
         'latest_product'=>5,

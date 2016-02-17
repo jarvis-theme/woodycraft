@@ -267,14 +267,15 @@ h2.title {color:#fe5a12; font-size:30px; font-weight:300; margin-bottom:30px;}
 .top-list h2.title { float:left; width:70%}
 .top-list .btn-thumb {float:right; list-style:none; padding:0; margin:10px 0 0; color:#fe5a12; font-size:13px;}
 .top-list .btn-thumb li {display:inline-block; line-height:30px; margin-left:5px}
-.top-list .btn-thumb li a {
+/*.top-list .btn-thumb li a {
 	background: url("../images/btn-thumb.png") no-repeat;
     display: inline-block;
     height: 30px;
     text-indent: -99999px;
     width: 30px;
-}
-.top-list .btn-thumb li a.btn-list {background-position:right 0}
+}*/
+/*.top-list .btn-thumb li a.btn-list {background-position:right 0}*/
+.btn-thumb li a{color: #fe5a12}
 .product-list {float:left; margin-bottom:30px;width:100%;}
 .product-list ul {list-style:none; padding:0; margin:0;}
 .product-list ul.grid li {text-align:center; margin-bottom:30px;}
@@ -752,6 +753,14 @@ footer .copyright img{border-radius: 5px}
 .nodecoration{text-decoration:none}
 #toplink{padding-bottom: 5px}.search-form{padding: 0}
 .nodecor{text-decoration: none}.center{text-align: center}
+.powerup form input[type="submit"]{
+	background-color: #fe5a12;
+	border: transparent;
+	padding: 8px 10px;
+	color: #fff;
+	margin-top: 5px;
+}
+.powerup form input[type="submit"]:hover{opacity: 0.7}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	.top-list h2.title{width: 60%}

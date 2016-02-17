@@ -44,7 +44,7 @@
                         	<div id="logo" class="col-xs-12">
                                 @if(logo_image_url())
                                 <a href="{{url('home')}}">
-                                    {{HTML::image(logo_image_url(), 'Logo', array('class'=>'desktop-logo'))}}
+                                    {{HTML::image(logo_image_url(), 'Logo '.Theme::place('title'), array('class'=>'desktop-logo'))}}
                                 </a>
                                 @else
                                 <a class="nodecoration" href="{{url('home')}}">
