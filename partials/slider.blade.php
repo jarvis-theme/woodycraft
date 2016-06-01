@@ -1,7 +1,7 @@
             <section id="p-slide">
-            	<div class="container">
+                <div class="container">
                     <div id="da-slider" class="da-slider slideshow">
-                        @foreach (slideshow() as $val)        
+                        @foreach (slideshow() as $val) 
                         <div class="da-slide">
                             <div class="da-img" id="slide-img">
                                 @if(!empty($val->url))
@@ -9,7 +9,7 @@
                                 @else
                                 <a href="#">
                                 @endif
-                                    {{HTML::image(slide_image_url($val->gambar), $val->title)}}
+                                    {{HTML::image(slide_image_url($val->gambar), $val->title)}} 
                                 </a>
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="item">
                             <div class="image-container">
                                 <a href="{{product_url($produk)}}">
-                                    {{HTML::image(product_image_url($produk->gambar1,'thumb'), $produk->nama, array('height'=>'114'))}}
+                                    {{HTML::image(product_image_url($produk->gambar1,'thumb'), $produk->nama, array('height'=>'114'))}} 
                                 </a>
                             </div>
                             <h5 class="product-name">{{short_description($produk->nama, 15)}}</h5>

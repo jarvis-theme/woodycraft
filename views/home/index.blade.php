@@ -1,5 +1,5 @@
-				<div class="container">
-                	<div class="inner-column row">
+                <div class="container">
+                    <div class="inner-column row">
                         <div id="center_column" class="col-lg-12 col-xs-12">
                             <div class="product-list col-xs-12">
                                 <div class="top-list">
@@ -20,7 +20,7 @@
                                             @endif
                                             <div class="image-container">
                                                 <a href="{{product_url($produk)}}">
-                                                    {{HTML::image(product_image_url($produk->gambar1, 'medium'), $produk->nama, array('class'=>'img-responsive centering','title'=>$produk->nama))}}
+                                                    {{HTML::image(product_image_url($produk->gambar1, 'medium'), $produk->nama, array('class'=>'img-responsive centering','title'=>$produk->nama))}} 
                                                 </a>
                                             </div>
                                             <h5 class="product-name">{{short_description($produk->nama, 10)}}</h5>
@@ -40,11 +40,11 @@
                             </div>
                         </div>
                     </div>
-                    @foreach(horizontal_banner() as $banner)    
+                    @foreach(horizontal_banner() as $banner) 
                     <div class="adv-bottom">
                         <a href="{{url($banner->url)}}">
-                        	{{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array("class"=>"img-responsive"))}}
-                    	</a>
+                            {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array("class"=>"img-responsive"))}} 
+                        </a>
                     </div>
-            	   @endforeach	
+                   @endforeach  
                 </div>

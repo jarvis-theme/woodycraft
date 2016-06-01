@@ -1,9 +1,9 @@
                 <div class="container">
-                	<div class="inner-column row">
+                    <div class="inner-column row">
                         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
                             @if(list_category()->count() > 0)
                             <div id="categories" class="block sidey">
-                            	<ul class="block-content nav">
+                                <ul class="block-content nav">
                                 @foreach(list_category() as $side_menu)
                                     @if($side_menu->parent == '0')
                                     <li>
@@ -36,18 +36,15 @@
                                 </ul>
                             </div>
                             @endif
-                            <div class="powerup">
-                                {{pluginSidePowerup()}}
-                            </div>
                             @if(best_seller()->count() > 0)
                             <div id="best-seller" class="block">
-                            	<div class="title"><h2>Produk Terlaris</h2></div>
-                            	<ul class="block-content">
+                                <div class="title"><h2>Produk Terlaris</h2></div>
+                                <ul class="block-content">
                                     @foreach(best_seller() as $best)
                                     <li>
-                                    	<a href="{{product_url($best)}}">
-                                        	<div class="img-block">
-                                                {{HTML::image(product_image_url($best->gambar1,'thumb'),$best->nama,array('width'=>'81','height'=>'auto'))}}
+                                        <a href="{{product_url($best)}}">
+                                            <div class="img-block">
+                                                {{HTML::image(product_image_url($best->gambar1,'thumb'),$best->nama,array('width'=>'81','height'=>'auto'))}} 
                                             </div>
                                             <p class="product-name">{{short_description($best->nama,25)}}</p>
                                             <p class="price">{{price($best->hargaJual)}}</p>
@@ -56,14 +53,14 @@
                                     @endforeach
                                 </ul>
                                 <div class="btn-more">
-                                	<a href="{{url('produk')}}">Lihat Semua</a>
+                                    <a href="{{url('produk')}}">Lihat Semua</a>
                                 </div>
                             </div>
                             @endif
                             @if(recentBlog(null, 2)->count() > 0)
                             <div id="latest-news" class="block">
-                            	<div class="title"><h2>Artikel Terbaru</h2></div>
-                            	<ul class="block-content">
+                                <div class="title"><h2>Artikel Terbaru</h2></div>
+                                <ul class="block-content">
                                     @foreach(recentBlog(null, 2) as $blogs)
                                     <li>
                                         <h5 class="title-news">{{$blogs->judul}}</h5>
@@ -76,7 +73,7 @@
                             @endif
                             @if(vertical_banner()->count() > 0)
                             <div id="advertising" class="block">
-                                @foreach(vertical_banner() as $banner)    
+                                @foreach(vertical_banner() as $banner) 
                                 <div class="img-block">
                                     <a href="{{url($banner->url)}}">
                                         {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array("class"=>"img-responsive"))}}
@@ -85,7 +82,7 @@
                                 @endforeach 
                             </div>
                             @endif
-                            {{ Theme::partial('subscribe') }}
+                            {{ Theme::partial('subscribe') }} 
                         </div>
                         <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
                             <div class="product-list col-xs-12">
@@ -114,7 +111,7 @@
                                             @endif
                                             <div class="image-container">
                                                 <a href="{{product_url($myproduk)}}">
-                                                {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array('class'=>'img-responsive gridimg','title'=>$myproduk->nama))}}
+                                                {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array('class'=>'img-responsive gridimg','title'=>$myproduk->nama))}} 
                                                 </a>
                                             </div>
                                             <h5 class="product-name">{{short_description($myproduk->nama,11)}}</h5>
@@ -136,7 +133,7 @@
                                         <li class="col-xs-12">
                                             <div class="image-container col-xs-12 col-md-3" id="listcontainer">
                                                 <a href="{{product_url($myproduk)}}">
-                                                    {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array('class'=>'img-responsive','title'=>$myproduk->nama))}}
+                                                    {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array('class'=>'img-responsive','title'=>$myproduk->nama))}} 
                                                 </a>
                                             </div>
                                             <h5 class="product-name">{{short_description($myproduk->nama,73)}}</h5>
@@ -153,14 +150,14 @@
                                 @endif
                                 </div>
                                 
-                                {{list_product(null, @$category, @$collection)->links()}}
+                                {{list_product(null, @$category, @$collection)->links()}} 
                             </div>
                         </div>
                     </div>
-                    @foreach(horizontal_banner() as $banner)    
+                    @foreach(horizontal_banner() as $banner) 
                     <div class="adv-bottom">
                         <a href="{{url($banner->url)}}">
-                            {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array("class"=>"img-responsive"))}}
+                            {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array("class"=>"img-responsive"))}} 
                         </a>
                         <br>
                     </div>

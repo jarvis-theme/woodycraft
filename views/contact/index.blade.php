@@ -53,13 +53,13 @@
                 @foreach(vertical_banner() as $banners)
                 <div class="img-block">
                     <a href="{{url($banners->url)}}">
-                        {{HTML::image(banner_image_url($banners->gambar),'Info Promo',array('class'=>'img-responsive'))}}
+                        {{HTML::image(banner_image_url($banners->gambar),'Info Promo',array('class'=>'img-responsive'))}} 
                     </a>
                 </div>
                 @endforeach
             </div>
             @endif
-            {{ Theme::partial('subscribe') }}
+            {{ Theme::partial('subscribe') }} 
         </div>
         <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
             <div class="contact-us">

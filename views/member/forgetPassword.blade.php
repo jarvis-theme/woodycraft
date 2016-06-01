@@ -1,7 +1,7 @@
 <div class="container">
     <div class="inner-column row">
         <div id="left_sidebar" class="col-xs-12 col-sm-4 col-lg-3 pull-right">
-            {{ Theme::partial('subscribe') }}
+            {{ Theme::partial('subscribe') }} 
             <br>
         </div>
         <div id="center_column" class="col-xs-12 col-sm-6 col-lg-4">

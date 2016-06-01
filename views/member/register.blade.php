@@ -1,20 +1,20 @@
 <div class="container">
 	<div class="inner-column row">
-        <div class="col-lg-3 col-xs-12 col-sm-4 pull-right">
-            <div id="advertising" class="block">
-            	@foreach(vertical_banner() as $banner)
-            	<div class="img-block">
-            		<a href="{{url($banner->url)}}">
-            			{{HTML::image(banner_image_url($banner->gambar),'Info Promo',array('width'=>'272','height'=>'auto','class'=>'img-responsive'))}}
-        			</a>
-                </div>
-            	@endforeach
-            </div>
-            <br>
-        </div>
-        <div id="center_column" class="col-lg-7 col-xs-12 col-sm-8">
-            {{Form::open(array('url'=>'member','method'=>'post','class'=>'form-horizontal'))}}
-            	<br>
+		<div class="col-lg-3 col-xs-12 col-sm-4 pull-right">
+			<div id="advertising" class="block">
+				@foreach(vertical_banner() as $banner)
+				<div class="img-block">
+					<a href="{{url($banner->url)}}">
+						{{HTML::image(banner_image_url($banner->gambar),'Info Promo',array('width'=>'272','height'=>'auto','class'=>'img-responsive'))}} 
+					</a>
+				</div>
+				@endforeach
+			</div>
+			<br>
+		</div>
+		<div id="center_column" class="col-lg-7 col-xs-12 col-sm-8">
+			{{Form::open(array('url'=>'member','method'=>'post','class'=>'form-horizontal'))}} 
+				<br>
 				<h2>Register</h2>
 				<hr><br>
 				<div class="form-group">
@@ -22,7 +22,7 @@
 					<div class="col-lg-10">
 						<input type="text" class="form-control" id="inputName" name="nama" value="{{Input::old('nama')}}" required>
 					</div>
-				</div>                           
+				</div>
 				<div class="form-group">
 					<label for="inputEmail1" class="col-lg-2">Email</label>
 					<div class="col-lg-10">
@@ -44,19 +44,19 @@
 				<div class="form-group">
 					<label for="dropdown" class="col-lg-2">Negara</label>
 					<div class="col-lg-10">
-						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, Input::old('negara'),array('required', 'id'=>"negara","data-rel"=>"chosen","class"=>"form-control"))}}
+						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, Input::old('negara'), array('required', 'id'=>"negara","data-rel"=>"chosen","class"=>"form-control"))}} 
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="dropdown" class="col-lg-2">Provinsi</label>
 					<div class="col-lg-10">
-						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, Input::old("provinsi"),array('required', 'id'=>"provinsi","data-rel"=>"chosen","class"=>"form-control"))}}
+						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, Input::old("provinsi"), array('required', 'id'=>"provinsi","data-rel"=>"chosen","class"=>"form-control"))}} 
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="dropdown" class="col-lg-2">Kota</label>
 					<div class="col-lg-10">
-						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, Input::old("kota"), array('required', 'id'=>"kota","data-rel"=>"chosen","class"=>"form-control"))}}
+						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, Input::old("kota"), array('required', 'id'=>"kota","data-rel"=>"chosen","class"=>"form-control"))}} 
 					</div>
 				</div>
 				<div class="form-group">
@@ -70,7 +70,7 @@
 					<div class="col-lg-10">
 						<input type="text" class="form-control" id="inputpos1" name="kodepos" value="{{Input::old('kodepos')}}" >
 					</div>
-				</div>                      
+				</div>
 				<div class="form-group">
 					<label for="inputpho1" class="col-lg-2">Telepon</label>
 					<div class="col-lg-10">
@@ -80,8 +80,8 @@
 				<div class="form-group">
 					<label for="inputpho1" class="col-lg-2">Captcha</label>
 					<div class="col-lg-10 form-inline">
-						{{ HTML::image(Captcha::img(), 'Captcha image') }}
-						{{Form::text('captcha','',array('class'=>'form-control'))}}
+						{{ HTML::image(Captcha::img(), 'Captcha image') }} 
+						{{Form::text('captcha','',array('class'=>'form-control'))}} 
 					</div>
 				</div>
 				<div class="form-group">
@@ -97,7 +97,7 @@
 						<button type="reset" class="btn btn-default">Reset</button>
 					</div>
 				</div>
-			{{Form::close()}}
-	    </div>
-    </div>
+			{{Form::close()}} 
+		</div>
+	</div>
 </div>

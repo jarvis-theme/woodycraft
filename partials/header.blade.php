@@ -4,13 +4,13 @@
                         @if( !is_login() )
                         <span class="white">
                             <small>
-                            {{HTML::link('member', 'Log in', array('class'=>'white'))}} | {{HTML::link('member/create', 'Register', array('class'=>'white'))}}
+                            {{HTML::link('member', 'Log in', array('class'=>'white'))}} | {{HTML::link('member/create', 'Register', array('class'=>'white'))}} 
                             </small>
                         </span>
                         @else
                         <span class="white">
                             <small>
-                            Selamat datang, <a href="{{url('member')}}" class="white">{{user()->nama}}</a> | {{HTML::link('logout', 'Log out', array('class'=>'white'))}}
+                            Selamat datang, <a href="{{url('member')}}" class="white">{{user()->nama}}</a> | {{HTML::link('logout', 'Log out', array('class'=>'white'))}} 
                             </small>
                         </span>
                         @endif
@@ -18,9 +18,9 @@
                 </div>
             </div>
             <header>
-            	<div class="top-head">
-                	<div class="container">
-                    	<div class="row desktop-only col-sm-8">
+                <div class="top-head">
+                    <div class="container">
+                        <div class="row desktop-only col-sm-8">
                             <div id="top_testimonial" class="col-sm-6 pull-left">
                                 @foreach(random_testimonial(1) as $value)
                                 <p>{{short_description($value->isi, 94)}} <br><span>~{{$value->nama}}</span></p>
@@ -41,10 +41,10 @@
                             </div>
                         </div>
                         <div class="row mobile-only logo-mobile">
-                        	<div id="logo" class="col-xs-12">
+                            <div id="logo" class="col-xs-12">
                                 @if(logo_image_url())
                                 <a href="{{url('home')}}">
-                                    {{HTML::image(logo_image_url(), 'Logo '.Theme::place('title'), array('class'=>'desktop-logo'))}}
+                                    {{HTML::image(logo_image_url(), 'Logo '.Theme::place('title'), array('class'=>'desktop-logo'))}} 
                                 </a>
                                 @else
                                 <a class="nodecoration" href="{{url('home')}}">
@@ -61,7 +61,7 @@
                         <div class="row col-xs-6 col-sm-4 carts">
                             <div id="shopping-cart">
                                 <div class="cart-block" id="shoppingcartplace">
-                                    {{shopping_cart()}}
+                                    {{shopping_cart()}} 
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>        
+                        </div>
                     </div>
                 </nav>
-			</header>
+            </header>

@@ -761,6 +761,25 @@ footer .copyright img{border-radius: 5px}
 	margin-top: 5px;
 }
 .powerup form input[type="submit"]:hover{opacity: 0.7}
+center#paypal button[type="submit"] {
+	background: #019CDE;
+	border: none;
+	padding: 10px;
+	color: #fff;
+	border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
+form[name="order"] > input[name="SAVE"] {
+	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.btn-pay { background: #00aee7; border: none; padding: 10px; color: #fff; border-radius: 5px }
+.btn-pay:hover { cursor: pointer; opacity: 0.7; color: #fff }
+.desc-prod ul, article ul, table ul { list-style: inside; }
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	.top-list h2.title{width: 60%}

@@ -1,4 +1,4 @@
-@if($mailing->action != '')
+@if(count($mailing) > 0 && !empty($mailing->action))
 <div id="newsletter_left" class="block">
     <div class="block-content">
         <h2>Newsletter</h2>
